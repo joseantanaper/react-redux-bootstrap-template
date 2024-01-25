@@ -7,9 +7,13 @@ const Navbar = () => {
       <header>
         <nav className="navbar navbar-expand fixed-top bg-body-tertiary">
           <div className="container-fluid flex-nowrap">
-            <a className="navbar-brand bg-danger" href="/">
-              Aha
-            </a>
+            <NavLink
+              className="btn navbar-brand bg-primary"
+              aria-current="page"
+              to={'/'}
+            >
+              #
+            </NavLink>
 
             <div className="d-flex justify-content-end border-start ps-3">
               <div className="btn-group">

@@ -1,24 +1,42 @@
-import React from "react"
-import { createRoot } from "react-dom/client"
-import { Provider } from "react-redux"
-import App from "./App"
-import { store } from "./app/store"
-import "./index.css"
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { Provider } from 'react-redux'
+import { store } from '@app/store'
+import '@style/custom.scss'
+import '@bootstrap-js'
 
-const container = document.getElementById("root")
+import {
+  // BrowserRouterProps,
+  createBrowserRouter,
+  RouterProvider,
+} from 'react-router-dom'
 
-if (container) {
-  const root = createRoot(container)
+import routes from '@config/routes'
+import Root from './routes/root'
+import Error from '@/routes/main/error'
 
-  root.render(
-    <React.StrictMode>
-      <Provider store={store}>
-        <App />
-      </Provider>
-    </React.StrictMode>,
-  )
-} else {
-  throw new Error(
-    "Root element with ID 'root' was not found in the document. Ensure there is a corresponding HTML element with the ID 'root' in your HTML file.",
-  )
-}
+const router = createBrowserRouter(
+  [
+    {
+      path: '/',
+      element: <Root />,
+      errorElement: <Error />,
+      children: routes,
+    },
+  ],
+  { basename: '/react-redux-bootstrap-template' }
+)
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <Provider store={store}>
+      <RouterProvider
+        router={router}
+        future={{
+          v7_startTransition: true,
+        }}
+      />
+    </Provider>
+  </React.StrictMode>
+)
+

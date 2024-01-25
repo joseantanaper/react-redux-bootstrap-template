@@ -19,15 +19,22 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.0.1",
+    "bootstrap": "^5.3.2",
+    "localforage": "^1.10.0",
+    "match-sorter": "^6.3.3",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-redux": "^9.1.0"
+    "react-redux": "^9.1.0",
+    "react-router-dom": "^6.21.3",
+    "sort-by": "^1.2.0"
   },
   "devDependencies": {
     "@testing-library/dom": "^9.3.4",
     "@testing-library/jest-dom": "^6.2.0",
     "@testing-library/react": "^14.1.2",
     "@testing-library/user-event": "^14.5.2",
+    "@types/node": "^20.11.6",
     "@types/react": "^18.2.47",
     "@types/react-dom": "^18.2.18",
     "@vitejs/plugin-react": "^4.2.1",
@@ -38,8 +45,44 @@
     "gh-pages": "^6.1.1",
     "jsdom": "^23.2.0",
     "prettier": "^3.2.1",
+    "sass": "^1.70.0",
     "typescript": "^5.3.3",
     "vite": "^5.0.11",
     "vitest": "^1.2.0"
+  },
+  "eslintConfig": {
+    "ignorePatterns": [
+      "build",
+      "node_modules"
+    ],
+    "extends": [
+      "react-app",
+      "react-app/jest",
+      "plugin:json/recommended"
+    ],
+    "plugins": [
+      "prettier"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "*.ts",
+          "*.tsx"
+        ],
+        "rules": {
+          "no-unused-vars": "off",
+          "@typescript-eslint/no-unused-vars": "off"
+        }
+      },
+      {
+        "files": [
+          "*.tsx",
+          "**/*.tsx"
+        ],
+        "rules": {
+          "react/jsx-no-target-blank": "off"
+        }
+      }
+    ]
   }
 }

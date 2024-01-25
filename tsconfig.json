@@ -15,7 +15,26 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "types": ["vitest/globals"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@app/*": ["src/app/*"],
+      "@components/*": ["src/components/*"],
+      "@features/*": ["src/features/*"],
+      "@resources/*": ["src/resources/*"],
+      "@style/*": ["src/style/*"],
+      "@bootstrap-scss/*": ["./node_modules/bootstrap/scss/bootstrap"],
+      "@bootstrap-icons-svg/*": [
+        "./node_modules/bootstrap-icons/bootstrap-icons.svg"
+      ],
+      "@bootstrap-js": [
+        "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+      ],
+      "@config/*": ["src/config/*"],
+      "@routes/*": ["./src/routes/*"]
+    }
   },
-  "include": ["src", "assets"],
+  "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
+

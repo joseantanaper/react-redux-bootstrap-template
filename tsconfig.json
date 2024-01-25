@@ -31,7 +31,7 @@
         "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
       ],
       "@config/*": ["src/config/*"],
-      "@routes/*": ["./src/routes/*"]
+      "@routes/*": ["src/routes/*"]
     }
   },
   "include": ["src"],

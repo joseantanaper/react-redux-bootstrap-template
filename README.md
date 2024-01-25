@@ -44,7 +44,9 @@ npm run dev
 "base": "/react-redux-bootstrap-template"
 ```
 
-3. Deploy:
+3. Custom **public/404.html** is mandatory to avoid 404 on refresh:
+
+4. Deploy:
 
 ```sh
 npm run deploy
@@ -145,7 +147,7 @@ Rename **.prettierrc.json** to **.prettierrc**
 npm install react-router-dom localforage match-sorter sort-by
 ```
 
-## PropTypes5
+## PropTypes
 
 ```sh
 npm install --save prop-types

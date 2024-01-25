@@ -15,8 +15,7 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "types": ["vitest/globals"],
-    "baseUrl": ".",
   },
-  "include": ["src"],
+  "include": ["src", "assets"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

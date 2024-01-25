@@ -7,10 +7,6 @@ npx degit reduxjs/redux-templates/packages/vite-template-redux my-app
 npm install
 ```
 
-GitHub Pages
-Build and deployment
-  Deploy from a branch
-    main / (root)
 
 
 ## Goals
